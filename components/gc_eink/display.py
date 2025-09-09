@@ -28,7 +28,6 @@ CONFIG_SCHEMA = cv.All(
             cv.Required(CONF_MODEL): cv.one_of("7P5In_P", lower=True),
             cv.Optional(CONF_RESET_PIN): pins.gpio_output_pin_schema,
             cv.Optional(CONF_BUSY_PIN): pins.gpio_input_pin_schema,
-            cv.Optional(CONF_ROTATION): cv.int_range(0, 270, multiple_of=90),
             cv.Optional(CONF_FULL_UPDATE_EVERY): cv.positive_int,
             cv.Optional(CONF_RESET_DURATION): cv.positive_time_period_milliseconds,
         }
