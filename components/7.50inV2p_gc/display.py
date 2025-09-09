@@ -17,7 +17,7 @@ from esphome.const import (
 
 DEPENDENCIES = ["spi"]
 
-waveshare_epaper_v2p_ns = cg.esphome_ns.namespace("waveshare_epaper_v2p")
+waveshare_epaper_v2p_ns = cg.esphome_ns.namespace("7.50inV2p_gc")
 WaveshareEPaper7P5InV2P_GC = waveshare_epaper_v2p_ns.class_("WaveshareEPaper7P5InV2P_GC", display.Display, cg.PollingComponent)
 
 CONFIG_SCHEMA = cv.All(
@@ -39,7 +39,7 @@ CONFIG_SCHEMA = cv.All(
 )
 
 FINAL_VALIDATE_SCHEMA = spi.final_validate_device_schema(
-    "waveshare_epaper_v2p",
+    "7.50inV2p_gc",
     require_miso=False,
     require_mosi=True
 )
