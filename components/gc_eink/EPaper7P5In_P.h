@@ -8,7 +8,7 @@
 
 namespace esphome {
     namespace gc_eink {
-        class EPaper7P5In_P : public WaveshareEPaper7P5InV2P {
+        class EPaper7P5In_P : public waveshare_epaper::WaveshareEPaper7P5InV2P {
             public:
                 void do_full_update();
                 void do_partial_update();
