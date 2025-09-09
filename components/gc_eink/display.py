@@ -25,7 +25,7 @@ CONFIG_SCHEMA = cv.All(
         {
             cv.GenerateID(): cv.declare_id(EPaper7P5In_P),
             cv.Required(CONF_DC_PIN): pins.gpio_output_pin_schema,
-            cv.Required(CONF_MODEL): cv.one_of("7P5In_P", lower=True),
+            cv.Required(CONF_MODEL): cv.one_of("EPaper7P5In_P", lower=True),
             cv.Optional(CONF_RESET_PIN): pins.gpio_output_pin_schema,
             cv.Optional(CONF_BUSY_PIN): pins.gpio_input_pin_schema,
             cv.Optional(CONF_FULL_UPDATE_EVERY): cv.positive_int,
