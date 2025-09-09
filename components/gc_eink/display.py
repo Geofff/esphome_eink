@@ -15,7 +15,7 @@ from esphome.const import (
     CONF_ROTATION,
 )
 
-DEPENDENCIES = ["spi", "waveshare_epaper"]
+DEPENDENCIES = ["spi"]
 
 gc_eink_ns = cg.esphome_ns.namespace("gc_eink")
 EPaper7P5In_P = gc_eink_ns.class_("EPaper7P5In_P", display.Display, cg.PollingComponent)
