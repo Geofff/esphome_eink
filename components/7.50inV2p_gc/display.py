@@ -25,7 +25,7 @@ CONFIG_SCHEMA = cv.All(
         {
             cv.GenerateID(): cv.declare_id(WaveshareEPaper7P5InV2P_GC),
             cv.Required(CONF_DC_PIN): pins.gpio_output_pin_schema,
-            cv.Required(CONF_MODEL): cv.one_of("7.50inv2p", lower=True),
+            cv.Required(CONF_MODEL): cv.one_of("7.50inv2p_gc", lower=True),
             cv.Optional(CONF_RESET_PIN): pins.gpio_output_pin_schema,
             cv.Optional(CONF_BUSY_PIN): pins.gpio_input_pin_schema,
             cv.Optional(CONF_ROTATION): cv.int_range(0, 270, multiple_of=90),
