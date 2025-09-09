@@ -1,4 +1,4 @@
-#include "7P5In_P.h"
+#include "EPaper7P5In_P.h"
 
 namespace esphome {
     namespace waveshare_epaper {
