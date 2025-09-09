@@ -12,6 +12,6 @@ namespace esphome {
             public:
                 void do_full_update();
                 void do_partial_update();
-        }
+        };
     }
 }
