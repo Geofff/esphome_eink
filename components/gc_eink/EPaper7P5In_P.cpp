@@ -1,7 +1,7 @@
 #include "EPaper7P5In_P.h"
 
 namespace esphome {
-    namespace waveshare_epaper {
+    namespace gc_eink {
        void EPaper7P5In_P::do_full_update() {
         this->at_update_ = 0;
         WaveshareEPaper7P5InV2P::display();
