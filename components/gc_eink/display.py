@@ -17,15 +17,15 @@ from esphome.const import (
 
 DEPENDENCIES = ["spi"]
 
-waveshare_epaper_v2p_ns = cg.esphome_ns.namespace("7.50inV2p_gc")
-WaveshareEPaper7P5InV2P_GC = waveshare_epaper_v2p_ns.class_("WaveshareEPaper7P5InV2P_GC", display.Display, cg.PollingComponent)
+gc_eink_ns = cg.esphome_ns.namespace("gc_eink")
+EPaper7P5In_P = gc_eink_ns.class_("EPaper7P5In_P", display.Display, cg.PollingComponent)
 
 CONFIG_SCHEMA = cv.All(
     display.FULL_DISPLAY_SCHEMA.extend(
         {
-            cv.GenerateID(): cv.declare_id(WaveshareEPaper7P5InV2P_GC),
+            cv.GenerateID(): cv.declare_id(EPaper7P5In_P),
             cv.Required(CONF_DC_PIN): pins.gpio_output_pin_schema,
-            cv.Required(CONF_MODEL): cv.one_of("7.50inv2p_gc", lower=True),
+            cv.Required(CONF_MODEL): cv.one_of("7P5In_P", lower=True),
             cv.Optional(CONF_RESET_PIN): pins.gpio_output_pin_schema,
             cv.Optional(CONF_BUSY_PIN): pins.gpio_input_pin_schema,
             cv.Optional(CONF_ROTATION): cv.int_range(0, 270, multiple_of=90),
@@ -39,7 +39,7 @@ CONFIG_SCHEMA = cv.All(
 )
 
 FINAL_VALIDATE_SCHEMA = spi.final_validate_device_schema(
-    "7.50inV2p_gc",
+    "gc_eink",
     require_miso=False,
     require_mosi=True
 )

@@ -1,13 +1,13 @@
-#include "7.50inV2p_gc.h"
+#include "7P5In_P.h"
 
 namespace esphome {
     namespace waveshare_epaper {
-       void WaveshareEPaper7P5InV2P_GC::do_full_update() {
+       void EPaper7P5In_P::do_full_update() {
         this->at_update_ = 0;
         WaveshareEPaper7P5InV2P::display();
        }
        
-       void WaveshareEPaper7P5InV2P_GC::do_partial_update() {
+       void EPaper7P5In_P::do_partial_update() {
            auto oldUpdate = this->at_update_;
             this->at_update_ = 1;
             WaveshareEPaper7P5InV2P::display();
